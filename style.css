@@ -1,0 +1,97 @@
+html, body,div,a {
+    margin:0;
+    padding:0;
+    border:0;
+    font:inherit;
+    vertical-align:baseline;
+}
+
+body {
+    background-color:rgb(54, 54, 102);
+    overflow: hidden;
+    font-size:1.5em;
+
+}
+
+.nav {
+    text-align: center;
+    overflow: hidden;
+    margin:10em auto;
+    width:480px;
+    position: relative;
+
+}
+
+.nav a {
+    display: block;
+    position: relative;
+    float:left;
+    color:tan;
+    padding: 1em 0  2em;
+    width:25%;
+    text-decoration: none;
+    transition:0.7s;
+
+
+}
+
+.nav a:hover {
+    color:rgb(137, 135, 252);
+}
+
+.effect {
+    position: absolute;
+    left:-12.5%;
+    transition: 0.7s ease-in-out;
+}
+
+.nav a:nth-child(1):hover ~ .effect {
+    left: 12.5%;
+}
+
+
+.nav a:nth-child(2):hover ~ .effect {
+    left: 37.5%;
+}
+
+
+.nav a:nth-child(3):hover ~ .effect {
+    left: 62.5%;
+}
+
+.nav a:nth-child(4):hover ~ .effect {
+    left: 87.5%;
+}
+
+
+.dot-nav:after {
+    content:"";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:2px;
+    background:rgb(137, 135, 252);
+    bottom:40px;
+}
+
+
+.dot-nav a:after{
+   content:"";
+   position: absolute;
+   width:6px;
+   height:6px;
+   bottom:38px;
+   left:50%;
+   margin-left: -2px;
+   background: rgb(137, 135, 252);
+   border-radius: 100%;
+}
+
+.dot-nav .effect {
+    width:10px;
+    height:10px;
+    bottom:36px;
+    margin-left: -5px;
+    background:rgb(137, 135, 252);
+    border-radius: 100%;;
+}
